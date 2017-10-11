@@ -1,0 +1,40 @@
+<html>
+<head>
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script src="dlpcustomselect.js"></script>
+	
+	<script type="text/javascript">
+		$(function(){
+			$(".demo1").dlpcustomSelect({
+				addButtonText:'Add',
+				delButtonText:'>>'
+			});
+			
+			$(".demo2").dlpcustomSelect({delButtonText:'>>'});
+			
+			$(".btnClass1").click(function(){
+				alert($(".demo1").dlpcustomSelect('getCustomData'));
+			});
+			$(".btnClass2").click(function(){
+				alert($(".demo2").dlpcustomSelect('getCustomData'));
+			});
+		});
+	</script>
+</head>
+<body>
+	demo1:
+	<select class="demo1">
+	</select>
+	
+	demo2:
+	<select class="demo2">
+		<option>qq.exe</option>
+		<option>360safe.exe</option>
+		<option>baidu.exe</option>
+	</select>
+	
+	<hr/>
+	<input class="btnClass1" type="button" value="get demo1 Value ..." />
+	<input class="btnClass2" type="button" value="get demo2 Value ..." />
+</body>
+</html>
